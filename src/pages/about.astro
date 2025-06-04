@@ -1,6 +1,6 @@
-
 ---
-import Navigation from '../components/Navigation.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import '../styles/global.css';
 
 const pageTitle = "À propos de moi";
@@ -41,7 +41,7 @@ const skillColor = "navy";
   </head>
 
   <body>
-    <Navigation />
+    <Header />
     <h1>{pageTitle}</h1>
     <p>Je suis Marc développeur web</p>
     <p>Voici quelques faits me concernant :</p>
@@ -61,5 +61,9 @@ const skillColor = "navy";
 {finished && <p>J'ai terminé ce tutoriel !</p>}
 
 {goal === 3 ? <p>Mon objectif est de terminer en 3 jours.</p> : <p>Mon objectif n'est pas de 3 jours.</p>}
+<Footer />
+<script>
+  import "../scripts/menu.js";
+  </script>
   </body>
 </html>
